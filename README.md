@@ -36,3 +36,7 @@ Then you can run it with
 ```sh
 docker-compose up
 ```
+
+## Related projects
+
+- [crccheck/docker-hello-world](https://github.com/crccheck/docker-hello-world)
