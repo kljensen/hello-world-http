@@ -3,14 +3,17 @@
 The goal of this project is to be the _smallest possible_ Docker
 image for testing HTTP services.  The server responds to all HTTP
 requests with a simple "Hello, World!" As of v0.5.0, the Docker
-container is just 22.8kB.
+container is just 23kB.
 
 ## Running with Docker
 
 To run this with Docker, do something like
 
 ```sh
-docker run -e HOST=0.0.0.0 -e PORT=8000 -p 8000:8000 --init ghcr.io/kljensen/hello-world-http:latest
+docker run \
+  -e HOST=0.0.0.0 -e PORT=8000 \
+  -p 8000:8000 --init \
+  ghcr.io/kljensen/hello-world-http:latest
 ```
 
 Notice:
