@@ -54,6 +54,10 @@ Then you can run it with
 docker-compose up
 ```
 
+## Past versions
+
+Check out the [packages](https://github.com/kljensen/hello-world-http/pkgs/container/hello-world-http) and [tags](https://github.com/kljensen/hello-world-http/tags).
+
 ## Related projects
 
 - [crccheck/docker-hello-world](https://github.com/crccheck/docker-hello-world)
