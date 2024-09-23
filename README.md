@@ -5,7 +5,7 @@
 The goal of this project is to be the **smallest possible** Docker
 image for testing HTTP services.  The server responds to all HTTP
 requests with a simple "Hello, World!" As of v0.5.0, the Docker
-container is just 23kB.
+container is just **23kB**.
 
 ## Running with Docker
 
