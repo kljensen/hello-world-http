@@ -1,6 +1,8 @@
-# Tiny Hello World HTTP
+<h1 align="center">
+  ⚡ Tiny Hello World HTTP ⚡
+</h1>
 
-The goal of this project is to be the _smallest possible_ Docker
+The goal of this project is to be the **smallest possible** Docker
 image for testing HTTP services.  The server responds to all HTTP
 requests with a simple "Hello, World!" As of v0.5.0, the Docker
 container is just 23kB.
