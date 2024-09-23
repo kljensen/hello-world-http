@@ -7,6 +7,12 @@ image for testing HTTP services.  The server responds to all HTTP
 requests with a simple "Hello, World!" As of v0.5.0, the Docker
 container is just **23kB**.
 
+## Why?
+
+Sometimes I want to test my backend setup: a reverse proxy,
+some port forwarding, my docker-compose configuration, etc.
+In such cases, I want the most simple thing possible. This is it.
+
 ## Running with Docker
 
 To run this with Docker, do something like
