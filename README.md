@@ -1,34 +1,48 @@
-# Hello world http
+# Tiny Hello World HTTP
 
-This is a simple hello world http server written in Rust.
-I wrote this to use as a very tiny Docker image for testing
-HTTP services. This image is a bit smaller than 600kb.
+The goal of this project is to be the _smallest possible_ Docker
+image for testing HTTP services.  The server responds to all HTTP
+requests with a simple "Hello, World!" As of v0.5.0, the Docker
+container is just 22.8kB.
 
 ## Running with Docker
 
 To run this with Docker, do something like
 
 ```sh
-docker run -e HOST=0.0.0.0 -p 8000:8000 ghcr.io/kljensen/hello-world-http:latest
+docker run -e HOST=0.0.0.0 -e PORT=8000 -p 8000:8000 --init ghcr.io/kljensen/hello-world-http:latest
 ```
 
-The `HOST` will tell the server to listen for outisde
-requests. The `-p 8000:8000` will map the container's
-port 8000 to the host's port 8000.
+Notice:
+
+- `HOST` and `PORT` are _required_.
+- `HOST` must be in dotted decimal, like `0.0.0.0`
+- If `HOST` is something other than `0.0.0.0`, your
+container will likely not respond to external requests.
+- `PORT` is the port on which the server will listen
+inside the container. If you're forwarding from the 
+host to the container, obviously this needs to match
+the port you publish with `-p`. See [the Docker documentation](https://docs.docker.com/engine/network/#published-ports).
+- The `--init` flag is optional, but it's a good idea to
+use it. It ensures that the server process is stopped
+properly when Docker gets a `SIGTERM` signal. (For example,
+this will make `docker run` handle `Ctrl-C` properly.)
 
 ## Running with Docker Compose
 
-To run this with Docker Compose, you should have a 
+To run this with Docker Compose, you should have a
 `docker-compose.yml` file that looks something like
 
 ```yaml
 services:
   hello-world:
     image: ghcr.io/kljensen/hello-world-http:latest
+    init: true
     ports:
       - "8000:8000"
     environment:
       - HOST=0.0.0.0
+      - PORT=8000
 ```
 
 Then you can run it with
