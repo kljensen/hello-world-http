@@ -58,6 +58,11 @@ docker-compose up
 
 Check out the [packages](https://github.com/kljensen/hello-world-http/pkgs/container/hello-world-http) and [tags](https://github.com/kljensen/hello-world-http/tags).
 
+## License
+
+This is licensed under the [Unlicense](https://unlicense.org/). Do whatever
+you want with it!
+
 ## Related projects
 
 - [crccheck/docker-hello-world](https://github.com/crccheck/docker-hello-world)
