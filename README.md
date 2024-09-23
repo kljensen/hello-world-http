@@ -9,9 +9,9 @@ container is just **23kB**.
 
 ## Why?
 
-Sometimes I want to test my backend setup: a reverse proxy,
-some port forwarding, my docker-compose configuration, etc.
-In such cases, I want the most simple thing possible. This is it.
+Sometimes I want to test my backend setup: a reverse proxy, some
+port forwarding, my docker-compose configuration, etc.  In such
+cases, I want the most simple HTTP service possible. This is it.
 
 ## Running with Docker
 
